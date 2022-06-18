@@ -12,7 +12,7 @@ const url = `https://api.themoviedb.org/3/movie/now_playing?offset=${offset}&api
 const imageURL = `https://image.tmdb.org/t/p/w500`;
 const searchURL = `https://api.themoviedb.org/3/search/movie?api_key=d672ab0084c627e8b1f0d8cb22ae96aa`;
 
-
+//getting data------------------------------------------------------------------------
 async function getData(url){ 
     const results = await fetch(url);
     const data = await results.json();
@@ -22,15 +22,16 @@ async function getData(url){
 console.log(getData(url))
 
 getData(url); 
+//------------------------------------------------------------------------------------
 
-//displaying data 
+//displaying data --------------------------------------------------------------------
 
 function displayMovies(data){
     main.innerHTML = '';
 
     //title, poster_path, vote_average, overview 
     data.forEach(movie =>{
-        const {title,poster_path,vote_average,overview} = movie;
+        const {title,poster_path,vote_average,overview, id} = movie;
         const movEl = document.createElement('div');
         movEl.classList.add('movie');
         movEl.innerHTML = `
@@ -38,17 +39,78 @@ function displayMovies(data){
 
         <div class = "movieInfo"></div>
             <h3 class ="movie-title" >${title}</h3>
-            <span class = "movie-votes">${vote_average}</span>
+            <span class = "movie-votes">&#x2B50; ${vote_average}</span>
         </div>
 
         <div class="overview">
+            <h3>Overview</h3>
             ${overview}
+            <br/>
+            <button class="know-more" id="${id}">More</button>
         </div>
         `
         main.appendChild(movEl);
+
+        document.getElementById(id).addEventListener('click', () =>{
+          openNav(movie);
+          console.log(id)
+        })
     })
 }
 
+// w3schools overlay open and close------------------------------------------
+/* Open */
+const overlayVideos = document.querySelector(".overlay-content")
+function openNav(movie) {
+    let id = movie.id;
+    let{title, vote_average, overview} = movie; 
+    fetch('https://api.themoviedb.org/3/movie/' + id +"/videos?api_key=" + apikey).then(res => res.json()).then (videoData =>{
+        console.log(videoData);
+        if (videoData){
+            document.getElementById("myNav").style.display = "block";
+            if (videoData.results.length > 0){
+                var embed = [];
+                embed.push(`
+                        <div>
+                            <h3 class ="movie-title" >${title}</h3>
+                            <span class = "movie-votes"> &#x2B50;${vote_average}</span>
+
+                            <h3>Overview</h3>
+                            ${overview}
+                        </div>`)
+                videoData.results.forEach(video => {
+                    let {id, name, key, site, type} = video;
+                    if (type == "Trailer" && site == "YouTube"){
+                        embed.push(`
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        `)
+                    }
+                })
+
+                //adding videos to overlay 
+                overlayVideos.innerHTML = embed.join('');
+            }
+        }
+    })
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+  //stopping the videos when you close the overlay 
+  const close = document.getElementsByTagName('iframe');
+  if (close != null){
+    for (let i=0; i<close.length;i++){
+        close[i].src=close[i].src;  //shoul reload 
+    }
+  }
+}
+
+//--------------------------------------------------
+
+
+
+// -----------------------------------------------------------------------------------
 
 
 

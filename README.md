@@ -30,15 +30,15 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
   - The results from the search should be displayed on the page
   - There should be a close icon with an id of `close-search-btn` that exits the search, clears results, and shows the current movies displayed previously
 - [ ] Website accounts for basic HTML/CSS accessibility features
-- [ ] Website should be responsive
+- [x] Website should be responsive
 
 #### STRETCH FEATURES
 
 - [ ] Deploy website using GitHub Pages. 
-- [ ] Allow user to view more details about a movie within a popup.
-- [ ] Improve the user experience through CSS & animation.
-- [ ] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
-- [ ] Implement anything else that you can get done to improve the app functionality!
+- [x] Allow user to view more details about a movie within a popup.
+- [x] Improve the user experience through CSS & animation.
+- [x] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
+- [x] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
 
@@ -51,10 +51,12 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
 Add your response here
+I do believe the topics featured in the last 3 labs have prepared me for this project. One of the major factors in this project was using APIs, getting and displaying the data. Prior to this past week, I had very little knowledge of using APIs, but I found that after the lessons and labs, I had a throuogh understanding on how to use them. Additionally, we worked with some styling and assesibility features which were also used for the project. The feature that I had a bit more difficulty with was displaying the images and data from the movie API. I had similar difficulties with the Giphy Party lab hence why I was worried for the project. I was able to solve my issue by doing some research and asking for help. 
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
 Add your response here
+If I had more time, I would make comments for each function and CSS selector explaining for what it is for. I found that when coding, I was not keeping track of my code and as more code was typed, it became harder to find certain functions. I would make things more organized so that it is easy to track. One feature that I would have loved to add to the project is filters. Filtering by genre, director, rating, etc. would be a nice feature to incorporate. Alongside this, I would add additional information to the movie descriptions; information such as the director, genre, and cast. 
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 

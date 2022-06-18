@@ -10,8 +10,9 @@
 <body>
     <header id="header">
         <div>
-            <h1 class="title">Flickster</h1>
+            <h1 id="title" class="title"> &#x1F3A5; Flickster</h1>
         </div>
+        <!-- search and clear buttons -->
         <div>
             <form id="form">
                 <input type="text" placeholder="Search for more movies" id = "search" class="search"/>
@@ -21,24 +22,42 @@
         </div>
     </header>
 
-    <!-- <form id="form">
-        <input type="search" id="query" name="q" placeholder="Search Movies">
-        <button type ="submit" class="searchBtn">Search</button>
-    </form> -->
+  
     <main id = "main">
         <div id="movies-grid">
             <img class = "movie-poster" src="" alt="">
 
             <div class = "movie-card"></div>
-                <h3 class = "movie-title"></h3>
-                <span class = "movie-votes"></span>
+                <h3 class = "movie-title">Title</h3>
+                <span class = "movie-votes">9.8</span>
             </div>
 
+            
             <div class="overview">
-
+                
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nostrum. Dolores doloribus inventore rerum ad? Blanditiis, ducimus culpa quasi repellat porro aspernatur natus beatae facilis ex voluptatum consequatur a ab.
             </div>
         </div>
     </main>
+
+
+    <div id="tags"></div>
+
+    <!-- ----------------------------------------- w3schools -->
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+        <!-- Overlay content -->
+        <div class="overlay-content" >
+            
+        </div>
+    
+    </div>
+    <!-- -------------------------------------------------- -->
+
 
     <div class ="showMoreMovies">
         <button id="load-more-movies-btn" type="button" class="search-btn hidden">More Movies</button>
