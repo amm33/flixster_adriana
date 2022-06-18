@@ -9,10 +9,16 @@
 </head>
 <body>
     <header id="header">
-        <h1 class="title">Flickster</h1>
-        <form id="form">
-            <input type="text" placeholder="Search for more movies" id = "search" class="search"/>
-        </form>
+        <div>
+            <h1 class="title">Flickster</h1>
+        </div>
+        <div>
+            <form id="form">
+                <input type="text" placeholder="Search for more movies" id = "search" class="search"/>
+                <button type="submit" class="search-input">Search</button>
+                <button type="button" class="close-search-btn" onclick="getData(url)">Close</button>
+            </form>
+        </div>
     </header>
 
     <!-- <form id="form">
@@ -20,12 +26,12 @@
         <button type ="submit" class="searchBtn">Search</button>
     </form> -->
     <main id = "main">
-        <div id="movieBody">
-            
+        <div id="movies-grid">
+            <img class = "movie-poster" src="" alt="">
 
-            <div class = "movieInfo"></div>
-                <h3></h3>
-                <span class = "movieRating"></span>
+            <div class = "movie-card"></div>
+                <h3 class = "movie-title"></h3>
+                <span class = "movie-votes"></span>
             </div>
 
             <div class="overview">
@@ -33,6 +39,11 @@
             </div>
         </div>
     </main>
+
+    <div class ="showMoreMovies">
+        <button id="load-more-movies-btn" type="button" class="search-btn hidden">More Movies</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
