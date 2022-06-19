@@ -1,4 +1,3 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
 
 ## Week 1 Assignment: Flixster
 
@@ -6,7 +5,7 @@ Submitted by: **Adriana Morales**
 
 Estimated time spent: **30** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://amm33.github.io/flixster_adriana/)
 
 ### Application Features
 
@@ -34,7 +33,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 #### STRETCH FEATURES
 
-- [ ] Deploy website using GitHub Pages. 
+- [x] Deploy website using GitHub Pages. 
 - [x] Allow user to view more details about a movie within a popup.
 - [x] Improve the user experience through CSS & animation.
 - [x] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
@@ -42,9 +41,12 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
+<div style="position: relative; padding-bottom: 44.99999999999999%; height: 0;">
+<iframe src="https://www.loom.com/embed/6369364cca3c458db788e5b4626e1770" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
-`ADD_EMBEDDED_CODE_HERE`
+Link As Well 
+- https://www.loom.com/share/6369364cca3c458db788e5b4626e1770
 
 ### Reflection
 
@@ -56,7 +58,7 @@ I do believe the topics featured in the last 3 labs have prepared me for this pr
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
 Add your response here
-If I had more time, I would make comments for each function and CSS selector explaining what it is for. I found that when coding, I was not keeping track of my code and as more code was typed, it became harder to find certain functions. I would make things more organized so that it is easy to track. One feature that I would have loved to add to the project are filters. Filtering by genre, director, rating, etc. would be a nice feature to incorporate. Alongside this, I would add additional information to the movie descriptions, such as the director, genre, and cast. Additionally, I would love to have figured out a different way to display the movie pages. Rather than having all movies on one page and loading more, I could figure out how to have multiple pages. Another thing I would work on is fixing the way the trailers are displayed. Perhaps I would add buttons that can go to the next trailer than having all the trailers together. 
+If I had more time, I would make comments for each function and CSS selector explaining what it is for. I found that when coding, I was not keeping track of my code and as more code was typed, it became harder to find certain functions. I would make things more organized so that it is easy to track. One feature that I would have loved to add to the project are filters. Filtering by genre, director, rating, etc. would be a nice feature to incorporate. Alongside this, I would add additional information to the movie descriptions, such as the director, genre, and cast. Additionally, I would love to have figured out a different way to display the movie pages. Rather than having all movies on one page and loading more, I could figure out how to have multiple pages. Another thing I would work on is fixing the way the trailers are displayed. Perhaps I would add buttons that can go to the next trailer than having all the trailers together. Lastly, I would figure out how to make the attribution a bit smaller. 
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
@@ -67,7 +69,21 @@ This project was slightly challenging in certain parts but overall, I have learn
 ### Open-source libraries used
 
 - Add any links to open-source libraries used in your project.
+  - https://www.themoviedb.org/documentation/api
+  - https://developers.themoviedb.org/3/getting-started/introduction
+  - https://developer.mozilla.org/en-US/ 
+
+- Other useful links/resourses used 
+  - https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp
+  - https://www.w3schools.com/css/css3_animations.asp
+  - https://www.geeksforgeeks.org/html-adding-youtube-videos/#:~:text=Upload%20the%20video%20that%20you,the%20URL%20of%20the%20video.
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+  - Learn CSS Animation in 15 Minutes - YouTube Video by Web Dev Simplified 
+    - https://www.youtube.com/watch?v=YszONjKpgg4
+
 
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+Shout Out to Michelle Fox-Romero and Eva Seinrich as we helped each other in explaing topics. Shout Out to my instructor Moe for helping me understanding how to get the movie images from the API. 
