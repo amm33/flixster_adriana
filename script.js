@@ -39,7 +39,7 @@ async function getData(url){
 }
 console.log(getData(url));
 
-getData(url); 
+//getData(url); 
 //------------------------------------------------------------------------------------
 
 //displaying data --------------------------------------------------------------------
@@ -60,6 +60,7 @@ function displayMovies(data){
             <h3 class ="movie-title" >${title}</h3>
             <span class = "movie-votes">&#x2B50; ${vote_average}</span>
         </div>
+        <br></br>
 
         <div class="overview">
             <h3>Overview</h3>
@@ -91,11 +92,12 @@ function openNav(movie) {
                 var embed = [];
                 embed.push(`
                         <div>
-                            <h3 class ="movie-title" >${title}</h3>
+                            <h1 class ="movie-title" >${title}</h1>
                             <span class = "movie-votes"> &#x2B50;${vote_average}</span>
 
                             <h3>Overview</h3>
                             ${overview}
+                            <br></br>
                         </div>`)
                 videoData.results.forEach(video => {
                     let {id, name, key, site, type} = video;
@@ -127,31 +129,10 @@ function closeNav() {
 
 //--------------------------------------------------
 
-
-
-// -----------------------------------------------------------------------------------
-
-
-
-// //this works but does not show rating 
-// const displayMovies = (movies) => {
-//     movies.forEach((movie) => {
-//         movieBody.innerHTML += 
-//         `<div class ="movieContainers">
-//         <img src= "${imageURL}${movie.poster_path}"
-//         alt="${movie.title}"
-//         <h3 class="movieTitle" >${movie.title}</h3>
-//         <span class="movieRating> ${movie.vote_average}<span>
-//         </div>
-//         <div class="movieOverview">
-//         <h3>Overview:</h3>${movie.overview}
-//         </div>`;
-//     });
-// }
-
 //searching stuff -----------------------------------------
 async function formSubmit(event){
     event.preventDefault();
+    main.innerHTML = '';
     currentSearchTerm = search.value; 
     if (currentSearchTerm){
         getData(searchURL + '&query='+currentSearchTerm)
@@ -165,46 +146,7 @@ searchBar.addEventListener('submit', formSubmit)
 //Close button -clears search and shows original movies 
 const closeBtn = document.querySelector(".close-search-btn"); 
 closeBtn.addEventListener('click', () =>{
+    currentAPIPage = currentAPIPage -1;
+    main.innerHTML = '';
     search.value = " ";
 })
-//---------------------------------------------------------
-
-//show more 
-// showMoreMoviesBtn.addEventListener('click', (e) => {
-//     const results = await getData(currentSearch);
-//     displayResults; 
-//     currentPage++; 
-// }) 
-
-// async function showMore(event){
-//     const results = await getData(currentSearch); 
-//     displayMovies(results);
-//     currentPage++; 
-// }
-// showMoreMoviesBtn.addEventListener('click', showMore)
-
-// async function handleShowMeMoreClick(event){
-//     const results = await getData(currentSearchTerm);
-//     displayMovies(results);
-//     currentAPIPage++; 
-// }
-// loadMoreMoviesBtn.addEventListener('click', handleShowMeMoreClick);
-
-// function loadData(){
-//     let dataset = getData(url);
-//     dataset.forEach(function(item){
-//         let div = document.createElement('div');
-//         div.className = 'item';
-//         div.innerHTML= dataset.innerHTML.replace('{{title}}', item.title);
-
-//         document.getElementById('items').appendChild(div);
-//     });
-// }
-// let currentPage = 1;
-// loadMoreMoviesBtn.onclick = () =>{
-//     let boxes = [...document.querySelectorAll('movies-grid')];
-//     for (var i= currentPage; i> currentPage + tot_pages; i++){
-//         boxes[i].style.display = 'inline-block';
-//     }
-//     currentPage +=1; 
-// }

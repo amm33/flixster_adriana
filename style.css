@@ -76,6 +76,45 @@ h1{
     color: white; 
 }
 
+/* styling search and close buttons */
+.search-input{
+    margin-top: 20px; 
+    display: inline-block; 
+    padding: 4px 10px; 
+    border: 1px solid #334;
+    font-size: 16px; 
+    background-color: #fff;
+    color:black; 
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-input:hover{
+    background-color: crimson; 
+    border-color: crimson; 
+    color: black;
+}
+
+.close-search-btn{
+    margin-top: 20px; 
+    display: inline-block; 
+    padding: 3px 3px; 
+    border: 1px solid #334;
+    font-size: 16px; 
+    /* background-color: #fff; */
+    /* color:black;  */
+    cursor: pointer;
+    /* font-weight: bold; */
+}
+
+.close-search-btn:hover{
+    background-color: crimson; 
+    border-color: crimson; 
+    color: black;
+}
+
+/* ---------------------------- */
+
 .movie{
     width: 250px; 
     margin: 1rem; 
@@ -105,12 +144,14 @@ h1{
     background-color: #36454F;
     padding: 1rem; 
     max-height: 100%; 
-    transform: translateY(101%)
-    
+    transform: translateY(100%);
+    overflow:auto; 
+    transition: transform 0.7s cubic-bezier(0.7, 0.04, 0.66, 1.71);
 }
 
 .movie:hover .overview{
     transform: translateY(0);
+
 }
 
 main{
@@ -121,18 +162,20 @@ main{
 }
 
 
-
-/* .hidden{
-    display: none; 
-} */
-
-/* More button -- shows trailer*/
+/* More button -- shows trailer and overview info about the movie*/
 .know-more{
     border:0; 
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin-top: 5px;
     font-weight: bold; 
+    font-size: 16px;;
     cursor: pointer;
+}
+
+.know-more:hover{
+    background-color: crimson; 
+    border-color: crimson; 
+    color: black;
 }
 
 /* The Overlay (background)--------w3Schools------------------------------------------------------------------------- */
@@ -156,6 +199,9 @@ main{
     width: 100%;
     text-align: center;
     margin-top: 30px;
+    display: flex; 
+    flex-wrap: wrap;
+    /* justify-content: center; */
   }
   
   .overlay a {

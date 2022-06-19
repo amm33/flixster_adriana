@@ -4,7 +4,7 @@
 
 Submitted by: **Adriana Morales**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **30** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
@@ -51,16 +51,18 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
 Add your response here
-I do believe the topics featured in the last 3 labs have prepared me for this project. One of the major factors in this project was using APIs, getting and displaying the data. Prior to this past week, I had very little knowledge of using APIs, but I found that after the lessons and labs, I had a throuogh understanding on how to use them. Additionally, we worked with some styling and assesibility features which were also used for the project. The feature that I had a bit more difficulty with was displaying the images and data from the movie API. I had similar difficulties with the Giphy Party lab hence why I was worried for the project. I was able to solve my issue by doing some research and asking for help. 
+I do believe the topics featured in the last 3 labs have prepared me for this project. One of the main factors in this project was using an API, and getting and displaying the data. Before this past week, I had very little knowledge of using APIs, but after the lessons and labs, I had a better understanding on how to use them. Additionally, we worked with some styling and accessibility features which were used for the project. The feature that I had a bit more difficulty with was displaying the images and data from the movie API. I had similar difficulties with the Giphy Party lab hence why I was worried about the project. I was able to solve my issues by doing some research and asking for help. 
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
 Add your response here
-If I had more time, I would make comments for each function and CSS selector explaining for what it is for. I found that when coding, I was not keeping track of my code and as more code was typed, it became harder to find certain functions. I would make things more organized so that it is easy to track. One feature that I would have loved to add to the project is filters. Filtering by genre, director, rating, etc. would be a nice feature to incorporate. Alongside this, I would add additional information to the movie descriptions; information such as the director, genre, and cast. 
+If I had more time, I would make comments for each function and CSS selector explaining what it is for. I found that when coding, I was not keeping track of my code and as more code was typed, it became harder to find certain functions. I would make things more organized so that it is easy to track. One feature that I would have loved to add to the project are filters. Filtering by genre, director, rating, etc. would be a nice feature to incorporate. Alongside this, I would add additional information to the movie descriptions, such as the director, genre, and cast. Additionally, I would love to have figured out a different way to display the movie pages. Rather than having all movies on one page and loading more, I could figure out how to have multiple pages. Another thing I would work on is fixing the way the trailers are displayed. Perhaps I would add buttons that can go to the next trailer than having all the trailers together. 
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
 Add your response here
+This project was slightly challenging in certain parts but overall, I have learned many new topics and how to properly use them. Getting the movie data from the API was easy for me but displaying the movies was a bit challenging. After help from the instructor and my fellow peers, this task was less confusing. Two features that I found the most challenging were the popup for each movie which would feature the overview and a trailer, and the load more button. From The Movie Database API, I was able to get the videos that they had and filter out the trailers. Various websites, which I cited in my code and will be included in the Open-source libraries used, were very helpful in getting the trailers and creating an overlay popup that will hold the trailer. For the load more feature, I tried utilizing the similar feature I had in my Giphy Party (Lab 3) but found that it would not work. I also consulted various videos, articles, and my peers for help. I found that my original code would have the next page of movies show up but would clear the last page; the movies were not being added to the page. As I was reading through my code, I found that one line would cause the page to start with an empty string, thus causing that whenever the load more button would be clicked, it would clear the page and add new data. By deleting this line, I was able to make the function work. I was surprised to see that features like the search bar and fetching data from the API which was challenging earlier this week were quite easy when doing the project. As I worked through the challenging features, I have learned even more about APIs and some styling components, like animations and transitions. I did notice that one of my peers created a different color border for each movie which made the movies pop, this is something I would like to play around with next time. 
+
 
 ### Open-source libraries used
 
