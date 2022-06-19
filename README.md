@@ -86,4 +86,4 @@ This project was slightly challenging in certain parts but overall, I have learn
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
-Shout Out to Michelle Fox-Romero and Eva Seinrich as we helped each other in explaing topics. Shout Out to my instructor Moe for helping me understanding how to get the movie images from the API. 
+Shout Out to Michelle Fox-Romero and Eva Seinrich as we helped each other in explaining topics. Shout Out to my instructor Moe for helping me understanding how to get the movie images from the API. 
