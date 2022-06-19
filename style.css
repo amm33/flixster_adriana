@@ -117,8 +117,11 @@ main{
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;  
-
+    /* display: none; */
 }
+
+
+
 /* .hidden{
     display: none; 
 } */
@@ -200,3 +203,29 @@ main{
 #title:hover{
     transform: rotate(360deg)
 }
+/* load more button */
+#load-more-movies-btn{
+    margin-top: 20px; 
+    display: inline-block; 
+    padding: 13px 30px; 
+    border: 1px solid #334;
+    font-size: 16px; 
+    background-color: #fff;
+    color:black; 
+    cursor: pointer;
+}
+
+#load-more-movies-btn:hover{
+    background-color: crimson; 
+    border-color: crimson; 
+    color: black;
+}
+
+/* main{
+    display:none; 
+}
+
+main:nth-child(1),
+main:nth-child(2){
+    display: inline; 
+} */

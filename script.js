@@ -1,25 +1,43 @@
 const apikey = 'd672ab0084c627e8b1f0d8cb22ae96aa';
+
+// ------------------
 const pageSize = 8; 
-var currentSearch = ''; 
-var currentPage = 0; 
-const offset = currentPage *pageSize;
+var currentSearchTerm = ''; 
+var currentAPIPage = 0; 
+var tot_pages; 
+//-------------------
+
+//const offset = currentPage *pageSize;
 var searchBar = document.querySelector('#form');
 var search = document.querySelector('#search')
 var movieBody = document.querySelector('#movies-grid');
 const main = document.querySelector('main');
-const showMoreMoviesBtn = document.querySelector('#load-more-movies-btn')
-const url = `https://api.themoviedb.org/3/movie/now_playing?offset=${offset}&api_key=d672ab0084c627e8b1f0d8cb22ae96aa`;
+
+//--------------------------------------
+const loadMoreMoviesBtn = document.querySelector('#load-more-movies-btn')
+//---------------------------------------
+
+const url = `https://api.themoviedb.org/3/movie/now_playing?limit=${pageSize}&api_key=d672ab0084c627e8b1f0d8cb22ae96aa`;
 const imageURL = `https://image.tmdb.org/t/p/w500`;
 const searchURL = `https://api.themoviedb.org/3/search/movie?api_key=d672ab0084c627e8b1f0d8cb22ae96aa`;
 
 //getting data------------------------------------------------------------------------
 async function getData(url){ 
-    const results = await fetch(url);
+    const nextPage = currentAPIPage + 1;
+    const results = await fetch(url + "&page=" + nextPage );
     const data = await results.json();
+    tot_pages = data.total_pages; 
     console.log(data);
+    console.log(tot_pages);
+    if (tot_pages == nextPage){
+        loadMoreMoviesBtn.style.visilibilty = 'hidden';
+    }
+    currentAPIPage = nextPage; 
+    
     displayMovies(data.results);
+    
 }
-console.log(getData(url))
+console.log(getData(url));
 
 getData(url); 
 //------------------------------------------------------------------------------------
@@ -27,14 +45,15 @@ getData(url);
 //displaying data --------------------------------------------------------------------
 
 function displayMovies(data){
-    main.innerHTML = '';
+    //main.innerHTML = '';
 
     //title, poster_path, vote_average, overview 
+
     data.forEach(movie =>{
         const {title,poster_path,vote_average,overview, id} = movie;
         const movEl = document.createElement('div');
         movEl.classList.add('movie');
-        movEl.innerHTML = `
+        movEl.innerHTML += `
         <img class = "movie-poster" src="${imageURL+poster_path}" alt="${title}">
 
         <div class = "movieInfo"></div>
@@ -101,7 +120,7 @@ function closeNav() {
   const close = document.getElementsByTagName('iframe');
   if (close != null){
     for (let i=0; i<close.length;i++){
-        close[i].src=close[i].src;  //shoul reload 
+        close[i].src=close[i].src;  //should reload 
     }
   }
 }
@@ -130,15 +149,16 @@ function closeNav() {
 //     });
 // }
 
-//searching stuff 
+//searching stuff -----------------------------------------
 async function formSubmit(event){
     event.preventDefault();
-    currentSearch = search.value; 
-    if (currentSearch){
-        getData(searchURL + '&query='+currentSearch)
+    currentSearchTerm = search.value; 
+    if (currentSearchTerm){
+        getData(searchURL + '&query='+currentSearchTerm)
     }else{
         getData(url)
     }
+    //currentAPIPage++; 
 }
 searchBar.addEventListener('submit', formSubmit)
 
@@ -147,7 +167,7 @@ const closeBtn = document.querySelector(".close-search-btn");
 closeBtn.addEventListener('click', () =>{
     search.value = " ";
 })
-
+//---------------------------------------------------------
 
 //show more 
 // showMoreMoviesBtn.addEventListener('click', (e) => {
@@ -156,9 +176,35 @@ closeBtn.addEventListener('click', () =>{
 //     currentPage++; 
 // }) 
 
-async function showMore(event){
-    const results = await getData(currentSearch); 
-    displayMovies(results);
-    currentPage++; 
-}
-showMoreMoviesBtn.addEventListener('click', showMore)
+// async function showMore(event){
+//     const results = await getData(currentSearch); 
+//     displayMovies(results);
+//     currentPage++; 
+// }
+// showMoreMoviesBtn.addEventListener('click', showMore)
+
+// async function handleShowMeMoreClick(event){
+//     const results = await getData(currentSearchTerm);
+//     displayMovies(results);
+//     currentAPIPage++; 
+// }
+// loadMoreMoviesBtn.addEventListener('click', handleShowMeMoreClick);
+
+// function loadData(){
+//     let dataset = getData(url);
+//     dataset.forEach(function(item){
+//         let div = document.createElement('div');
+//         div.className = 'item';
+//         div.innerHTML= dataset.innerHTML.replace('{{title}}', item.title);
+
+//         document.getElementById('items').appendChild(div);
+//     });
+// }
+// let currentPage = 1;
+// loadMoreMoviesBtn.onclick = () =>{
+//     let boxes = [...document.querySelectorAll('movies-grid')];
+//     for (var i= currentPage; i> currentPage + tot_pages; i++){
+//         boxes[i].style.display = 'inline-block';
+//     }
+//     currentPage +=1; 
+// }
